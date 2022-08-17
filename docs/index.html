@@ -1,0 +1,289 @@
+
+<html>
+
+	<head>
+		<!-- title and other meta data -->
+		<title>REU Site</title>
+
+		<!-- style sheets -->
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="src/css/index.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+
+	<style>	
+
+body, html {
+  height: 100%;
+  font: Product Sans, sans-serif;
+}
+
+img {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.menu {
+  display: none;
+}
+	:root {
+  			--blue: #17497f;
+  			--green: #177f4d;
+        --red: #783635;
+        }
+
+	.bgimg{
+		  background-position: center;
+		  background-size: cover;
+		  background-image: url("https://cdn.astrobin.com/thumbs/gFlWmtEd6-o4_16536x16536_kWXURFLk.jpg");
+		  background-repeat: no-repeat;
+  		background-attachment: fixed;
+		  min-height: 88%;}
+
+
+	.w3-button:hover{
+			color:#17497f!important;
+			background-color:#ffffff;
+    }
+
+	.tag-box{
+			background-color:var(--blue);
+			color:white;
+			display:inline-block;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			padding-left:10px;
+			padding-right:10px;
+			text-align:center}.w3-badge{border-radius:50%}
+	</style>
+	
+
+	<body>
+		<!-- all website content that will be visible to the user go in the body -->
+
+	<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#background" class="w3-button w3-block w3-black">BACKGROUND</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#methods" class="w3-button w3-block w3-black">METHODOLOGY</a>
+    </div>
+		<div class="w3-col s3">
+			<a href="#results" class="w3-button w3-block w3-black">RESULTS</a>
+		</div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT ME</a>
+    </div>
+  </div>
+</div>
+
+    
+	<!-- header with image -->
+	<header class="bgimg w3-display-container">
+		<div class="w3-display-bottomleft w3-center w3-padding-large">
+			<!-- <div class="titleWrapper2">
+    		<span class="w3-text-white" style="font-size:14pt">Claire Zwicker<br>Illinois Institute of Technology<br>CIERA REU at Northwestern University</span>
+    		</div> -->
+  		</div>
+  		<div class="w3-display-topmiddle w3-center" style="padding-top: 6%;">
+  			<div class="titleWrapper2">
+    			<b><span class="w3-text-white" style="font-size:48px">Applying Bayesian Statistics to<br>Identify Binaries in NGC 6819</span></b>
+    			<span class="w3-text-white" style="font-size:14pt"><br>Claire Zwicker, Illinois Institute of Technology<br>CIERA REU at Northwestern University</span>
+    			</div>
+  		</div>
+	    <div class="w3-display-bottomright w3-center w3-padding-large">
+	    	<div class="titleWrapper2">
+	    		<span class="w3-text-white" style="font-size:14pt"> <a href="https://www.astrobin.com/users/Space_Man_Spiff/"> Image Credit: Jeff Schilling</a></span>
+	    	</div>
+	  	</div>
+	</header>
+
+	<div style="background-color:#181a1b">
+
+		<!-- background container -->
+
+		<div class="w3-container" id="background" style="margin-top: -54.9px">
+			<div class="w3-content" style="max-width:75%">
+				<div class="titleWrapper">
+					<h1 class="w3-center w3-padding-32" style="margin-top: 55px"><span class="tag-box w3-wide">BACKGROUND</span></h1>
+				</div>
+  					
+  				<p>NGC 6819 is a loose region of stars which are gravitationally bound to each other. Within NGC 6819 are several hundred cluster members, which all have similar age, distance, metallicity, and reddening. Many binaries are thought to form during star and consequently cluster formation. In star clusters, close gravitational encounters can also form new binaries, destroy binaries and exchange stars in/out of binaries. <b style="color:#ff8570">Binaries help us understand star formation, stellar evolution pathways, and how a cluster will evolve dynamically over time.</b></p>
+
+				 <p>We can apply a tool called Bayesian Analysis for Stellar Evolution with Nine Parameters (BASE-9) to inspect the evolution of clusters and gain insight into the qualities of it such as age, distance modulus, metallicity, and reddening.</p>
+					
+				 <p>NGC 6819 is reported to have an age of 2.4 \(\pm\) .02 Gyr, a distance modulus of 12.22 \(\pm\) .1 mag, a metallicity of .051 \(\pm\) .02 dex, and a reddening of E(B-V) = 0.130 \(\pm\)  0.035 mag (Ak et al. 2016); (Milliman et al. 2014). NGC 6819 has been previously reported to have a parallax distance around 2309 \(\pm\)  106 pc (Ak et al. 2016) and 2.82 kpc (Yang et al. 2022), a radial velocity around 2.34 \(\pm\)  0.05 km/s (Hole et al. 2009) and 2.4 km/s (Milliman et al. 2014), and proper motions of <\(\mu_{\alpha}\)> = -2.916 mas/yr and <\(\mu_{\delta}\)> = -3.866 mas/yr (Yang et al. 2022).</p>
+
+  			</div>
+		</div>
+
+		<!-- methodology container -->
+		<div class="w3-container" id="methods">
+			<div class="w3-content" style="max-width:75%">
+				<div class="titleWrapper" >
+					<h1 class="w3-center w3-padding-32" style="margin-top: 55px"><span class="tag-box w3-wide">METHODOLOGY</span></h1>
+				</div>
+
+			<figure style="float:center;float:right;width: 50%;min-width: 300px;">
+				<img src="src/images/RVhist.png" alt= "RV histogram" style="width:100%;padding:10px;float:right;" />
+				<img src="src/images/PAhist.png" alt= "Distance histogram" style="width:100%;padding:10px;float:right;" />
+			</figure>
+			<h2 style="padding-top:50px"><b>How We Filtered Out Nonmembers Before Using BASE-9</b></h2>
+			<br><br>
+			<p>We first identified probable cluster members using astrometric data available in the Gaia, 2MASS, and Pan-STARRS photometric surveys. One of the challenges in doing so is that field stars were present between our line of sight to the cluster, as well as behind the cluster. We recovered members using the cluster's radial velocity, parallax, and proper motion, since those parameters are distinct from surrounding field stars. Gaia supplies this data, and after plotting histograms and fitting the distributions, the member probabilities can then be calculated with the equation below.</p>
+				<figure style= "float:center;">
+  						<img src="src/images/equation3.png" alt="Membership probability caluclation" style="width:40%; min-width: 300px;">
+						<figcaption style="font-size:12pt;text-align: center; padding: 10px 0px 10px 0px ;"><b>Figure 1.</b>Membership probability calculation from <a href="https://ui.adsabs.harvard.edu/abs/2008AJ....135.2264G/abstract">Geller et al.</a></figcaption>
+  			</figure>
+
+			 <figure><img src="src/images/PMhist.png" alt= "Proper Motion histogram" style="width:50%;min-width: 300px; padding:10px;float:center;" />
+				<figcaption style="font-size:12pt;text-align: justify; padding: 10px 0px 10px 0px ;"><b>Figure 2.</b> The Gaussian fits and corresponding cluster values for <b>(a)</b> radial velocity in km/s (RV), <b>(b)</b> distance in pc, and <b>(c)</b> proper motions in mas/yr.</a></figcaption></figure>
+
+				<p>Multiplying those three probabilities together provides an overall probability, and we chose a desired minimum for membership.</p>
+
+  			</div>
+		</div>
+
+		<!-- results container -->
+		<div class="w3-container" id="results">
+			<div class="w3-content" style="max-width:75%">
+				<div class="titleWrapper" >
+					<h1 class="w3-center w3-padding-32" style="margin-top: 55px"><span class="tag-box w3-wide">RESULTS</span></h1>
+				</div>
+
+				<figure style="float:right;width: 50%;min-width: 300px; margin: 0px;">
+					<img src="src/images/CMD.png" alt= "CMD" style="padding: 10px; width: 85%;" />
+					<figcaption style="font-size:12pt;text-align: center; margin: 15px;"><b>Figure 3 (top).</b> A color magnitude diagram of NGC 6819, depicting the binaries that were recovered from our cluster sample using Gaia photometry. An isochrone from BASE-9 is plotted, along with a colorbar showing the mass ratios for each binary.
+					<img src="src/images/massratio.png" alt= "mass ratio" style="padding: 10px; width: 90%" />
+					<figcaption style="font-size:12pt;text-align: center; margin: 20px;"><b>Figure 4 (bottom).</b> A histogram of NGC 6819's mass ratios found using BASE-9. Binaries that lie closer to the isochrone have lower mass ratios, making it difficult to assess whether a binary has been detected. As a result, binary stars with a mass ratio of q < 0.5 are left incomplete.</a></figcaption>
+				</figure>
+
+				<div>
+				<h2 style="padding-top:50px"><b>BASE-9 Identified 169 Binaries in NGC 6819</b></h2>
+				
+				<p>We selected the photometry of these cluster members and used BASE-9's singlePopMcmc feature. This will sample each of the cluster's parameters (age, distance modulus, metallicity, and reddening) with a Markov chain Monte Carlo algorithm. We input values for these parameters that we believed are accurate, known as the priors; these priors will inform the algorithm where to sample. They are fed into singlePopMcmc alongside the photometry file, which will then run thousands of iterations to sample each parameter space. This required many computing hours to complete, which was leveraged with Northwestern's Quest High Performance Computing Cluster.</p>
+				
+				<p>Once the script has finished running, we were left with thousands of data points, from which we constructed a histogram and fit it with a Gaussian for the most probable value. As a result, the cluster's age, distance modulus, metallicity, and reddening was found. When the cluster's age was determined, we used another feature of BASE-9 called makeCMD in order to generate a mean fit isochrone. These techniques have been applied before with NGC 188 described by Cohen et al. (2020).</p>
+				
+				<p>The derived cluster parameters were used along with the photometry in BASE-9's sampleMass feature to sample potential binaries. This feature will output two columns for each cluster member; a potential primary star mass and its ratio between the secondary. It will do so for hundreds of iterations, sampling potential combinations for each star. Once the script has finished, the primary masses and mass ratios are averaged for each object. If an object's secondary mass was greater than \(3\sigma\) from the mean, we considered it to be a binary. Since computing time on Quest was limited to 1 week (168 hours total), we ran sampleMass in parallel to reduce overall processing time. </p>
+				<br>
+				</div>
+
+
+				<figure>
+					<img src="src/images/samplingandhist.png" alt="sampling" style="width:100%;min-width: 300px;">
+					<figcaption style="font-size:12pt;text-align: center; padding: 10px 0px 10px 0px ;"><b>Figure 5.</b> Sampling plot and histograms of the posterior distributions for the cluster parameters derived by BASE-9 for NGC 6819.  The mean and standard deviation is also shown on the right for each distribution, for reference.</a></figcaption>
+				</figure>
+
+
+				<p>We found that singlePopMcmc had poor sampling when faint stars were included in the run. To remedy this we removed stars fainter than 17 mag from the photometry file prior to running. We also found that including more than one survey's filters would similarly sample poorly. Pan-STARRS filters were chosen when deriving the cluster members; Gaia and 2MASS weren't included. The cluster parameters found from this trimmed photometry file were then used with the original photometry file within sampleMass.</p>
+
+				<h2><b>Conclusion and Future Improvements</b></h2>
+
+				<p>We used BASE-9 and identified 169 binaries in the open cluster NGC 6819. This translates to a binary fraction of approximately 34.9\(\%\) \(\pm\) 2.69\(\%\).  A previous study reported "a incompleteness-corrected binary fraction for all MS binaries with periods less than 104 days to be 22\(\%\) \(\pm\) 3\(\%\)" (Milliman et al. 2014). We also derived the following cluster parameters: a log(age) of 9.462 \(\pm\) .0012, a metallicity of -.109 \(\pm\) .0043 dex, a distance modulus of 12.231 \(\pm\) .0057, and a reddening of 505.84 \(\pm\) 2.78 mmag. </p>
+
+				<p>These values have corresponding errors that are precise, which demonstrates the power and utility of a Bayesian statistics approach. Yet, these results rely on the accuracy of the models which BASE-9 utilizes, which means these error constraints may not be nearly as precise as we may think.</p>
+
+				<p> NGC 6819's isochrone did not fit the main sequence as anticipated; it lies slightly to the right for some of the Gaia Cluster Members in <b>Figure 3.</b> Ideally, it would encompass those cluster members more closely. Future work and improvements with sampling NGC 6819 in singlePopMcmc is needed. This involves including more filters than just Pan-STARRS for singlePopMcmc. Furthermore, mass ratios of q < 0.5 are incomplete, and will need to be corrected. </p>
+
+				<p>BASE-9 is capable of predicting several parameters of a cluster. We hope to be able to apply the techniques outlined to many clusters. Automation of these operations will enable us to examine trends across many clusters, which will prove useful for future stellar astrophysics work. Future work is necessary to explore the accuracy of the models BASE-9 uses and the extent of its features as well. </p>
+
+
+				<h2><b>References</b></h2>
+				<p> Ak, T., Bostanci, Z. F., Yontan, T., et al. 2016, Ap&SS, 361, 126
+					<br>Cohen, R. E., Geller, A. M., & von Hippel, T. 2020, AJ, 159, 11
+					<br>Geller, A. M., Mathieu, R. D., Harris, H. C., & McClure, R. D. 2008, AJ, 135, 2264
+					<br>Hole, K. T., Geller, A. M., Mathieu, R. D., et al. 2009, The Astronomical Journal, 138, 159.
+					<br>Milliman, K. E., Mathieu, R. D., Geller, A. M., et al. 2014, AJ, 148, 38
+					<br>von Hippel, T., Robinson, E., Jeffery, E., et al. 2014, arXiv e-prints, arXiv:1411.3786
+					<br>Yang, Y., Li, C., Huang, Y., & Liu, X. 2022, The Astrophysical Journal, 925, 159. </p>
+  			</div>
+
+		</div>
+
+
+		<!-- about container -->
+		<div class="w3-container w3-padding-48" id="about">
+			<div class="w3-content" style="max-width:75%">
+				<div class="titleWrapper" >
+					<h1 class="w3-center w3-padding-32" style="margin-top:6px"><span class="tag-box w3-wide">ABOUT ME</span></h1>
+				</div>
+
+  			<p> <img src="src/images/me.jpg" style="width:30%;min-width: 300px; padding:35px;float:left"/> <br>My name is Claire Zwicker and I'm currently a 5th year undergraduate physics and astrophysics major at Illinois Institute of Technology. My general areas of interest include stellar astrophysics, observational instrumentation, and neutrino research. The CIERA REU program has been a wonderful opportunity for me to develop my skills and interests; I would like to thank Aaron Geller and Tjitske Starkenburg for running and coordinating this program. This work was made possible through the help of many collaborators including Aaron Geller, Ted von Hippel, Elizabeth Jeffery, Roger Cohen, Erin Motherway, Rafael Catena, and the rest of the BASE-9 group. <br><strong>Contact Info:<strong/> czwicker[at]hawk.iit.edu</p>
+  
+			
+			</div>
+  			
+		</div>
+
+		<script>
+			function myFunctionOn() {
+  			document.getElementById("image").style="width:50%";
+			}
+		</script>
+
+		<script>
+			function myFunctionOff() {
+  			document.getElementById("image").style="width:100%";
+			}
+		</script>
+
+
+		<!-- load my javascript -->
+		<script src="dropdown.js"></script>
+
+		<!-- Footer -->
+		<footer class="w3-center w3-dark-grey w3-padding-32 w3-large">
+			<div class="w3-content" style="max-width:75%; font-weight: normal;">
+				<p> This material is based upon work supported by the National Science Foundation under Grant No. AST-2149425, a Research Experiences for Undergraduates (REU) grant awarded to CIERA at Northwestern University. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. This research was supported in part through the computational resources and staff contributions provided for the Quest high performance computing facility at Northwestern University which is jointly supported by the Office of the Provost, the Office for Research, and Northwestern University Information Technology.</p>
+
+				<div class="w3-row">
+					<div class="w3-third w3-container">
+						<img src="src/images/iitlogo.png" class=" w3-margin-top" style="width:500%"></img>
+					</div>
+					<div class="w3-third w3-container">
+						<img src="src/images/nsflogo.png" class="w3-margin-top" style="max-width:40%"></img>
+					</div>
+					<div class="w3-third w3-container">
+						<img src="src/images/CIERA_Northwestern.png" class=" w3-margin-top" style="width:500%"></img>
+					</div>
+				</div>
+				<p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-white w3-text-black">w3.css</a></p>
+			</div>
+		</footer>
+
+	</body>
+
+</html>
