@@ -1,10 +1,5 @@
-@font-face {
-    font-family: Product Sans;
-    src: url(ProductSans-Regular.ttf);
-}
-
 body {
-  font-family: Product Sans;
+  font-family: 'Roboto', sans-serif;;
   color: white;
   text-align: left;
 
