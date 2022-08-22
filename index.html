@@ -129,7 +129,7 @@ img {
   		</div>
 	    <div class="w3-display-bottomright w3-center w3-padding-large">
 	    	<div class="titleWrapper2">
-	    		<span class="w3-text-white" style="font-size:14pt"> <a href="https://www.astrobin.com/users/Space_Man_Spiff/"> Image Credit: Jeff Schilling</a></span>
+	    		<span class="w3-text-white" style="font-size:14pt"> <a href="https://www.astrobin.com/users/Space_Man_Spiff/"target="_blank" rel="noopener noreferrer"> Image Credit: Jeff Schilling</a></span>
 	    	</div>
 	  	</div>
 	</header>
@@ -138,13 +138,13 @@ img {
 
 		<!-- background container -->
 
-		<div class="w3-container" id="background" style="margin-top: -54.9px">
+		<div class="w3-container" id="background" style="margin-top: -54.5px">
 			<div class="w3-content" style="max-width:75%">
 				<div class="titleWrapper">
-					<h1 class="w3-center w3-padding-32" style="margin-top: 55px"><span class="tag-box w3-wide">BACKGROUND</span></h1>
+					<h1 class="w3-center w3-padding-32" style="margin-top: 54.3px"><span class="tag-box w3-wide">BACKGROUND</span></h1>
 				</div>
   					
-  				<p>NGC 6819 is a loose region of stars which are gravitationally bound to each other. Within NGC 6819 are several hundred cluster members, which all have similar age, distance, metallicity, and reddening. Many binaries are thought to form during star and consequently cluster formation. In star clusters, close gravitational encounters can also form new binaries, destroy binaries and exchange stars in/out of binaries. <b style="color:#ff8570">Binaries help us understand star formation, stellar evolution pathways, and how a cluster will evolve dynamically over time.</b></p>
+  				<p>NGC 6819 is a loose region of stars that are gravitationally bound to each other. Within NGC 6819 are several hundred cluster members, which all have similar age, distance, metallicity, and reddening. Many binaries are thought to form during star and consequently cluster formation. In star clusters, close gravitational encounters can also form new binaries, destroy binaries and exchange stars in/out of binaries. <b style="color:#ff8570">Binaries help us understand star formation, stellar evolution pathways, and how a cluster will evolve dynamically over time.</b></p>
 
 				 <p>We can apply a tool called Bayesian Analysis for Stellar Evolution with Nine Parameters (BASE-9) to inspect the evolution of clusters and gain insight into the qualities of it such as age, distance modulus, metallicity, and reddening.</p>
 					
@@ -173,7 +173,7 @@ img {
   			</figure>
 
 			 <figure><img src="src/images/PMhist.png" alt= "Proper Motion histogram" style="width:50%;min-width: 300px; padding:10px;float:center;" />
-				<figcaption style="font-size:12pt;text-align: justify; padding: 10px 0px 10px 0px ;"><b>Figure 2.</b> The Gaussian fits and corresponding cluster values for <b>(a)</b> radial velocity in km/s (RV), <b>(b)</b> distance in pc, and <b>(c)</b> proper motions in mas/yr.</a></figcaption></figure>
+				<figcaption style="font-size:12pt;text-align: center; padding: 10px 0px 10px 0px ;"><b>Figure 2.</b> The Gaussian fits and corresponding cluster values for <b>(a)</b> radial velocity in km/s (RV), <b>(b)</b> distance in pc, and <b>(c)</b> proper motions in mas/yr.</a></figcaption></figure>
 
 				<p>Multiplying those three probabilities together provides an overall probability, and we chose a desired minimum for membership.</p>
 
@@ -189,19 +189,19 @@ img {
 
 				<figure style="float:right;width: 50%;min-width: 300px; margin: 0px;">
 					<img src="src/images/CMD.png" alt= "CMD" style="padding: 10px; width: 85%;" />
-					<figcaption style="font-size:12pt;text-align: center; margin: 15px;"><b>Figure 3 (top).</b> A color magnitude diagram of NGC 6819, depicting the binaries that were recovered from our cluster sample using Gaia photometry. An isochrone from BASE-9 is plotted, along with a colorbar showing the mass ratios for each binary.
+					<figcaption style="font-size:12pt;text-align: center; margin: 15px;"><b>Figure 3.</b> A color magnitude diagram of NGC 6819, depicting the binaries that were recovered from our cluster sample using Gaia photometry. An isochrone from BASE-9 is plotted, along with a colorbar showing the mass ratios for each binary.
 					<img src="src/images/massratio.png" alt= "mass ratio" style="padding: 10px; width: 90%" />
-					<figcaption style="font-size:12pt;text-align: center; margin: 20px;"><b>Figure 4 (bottom).</b> A histogram of NGC 6819's mass ratios found using BASE-9. Binaries that lie closer to the isochrone have lower mass ratios, making it difficult to assess whether a binary has been detected. As a result, binary stars with a mass ratio of q < 0.5 are left incomplete.</a></figcaption>
+					<figcaption style="font-size:12pt;text-align: center; margin: 20px;"><b>Figure 4 (above).</b> A histogram of NGC 6819's mass ratios found using BASE-9. Binaries that lie closer to the isochrone have lower mass ratios, making it difficult to assess whether a binary has been detected. As a result, binary stars with a mass ratio of q < 0.5 are left incomplete.</a></figcaption>
 				</figure>
 
 				<div>
 				<h2 style="padding-top:50px"><b>BASE-9 Identified 169 Binaries in NGC 6819</b></h2>
 				
-				<p>We selected the photometry of these cluster members and used BASE-9's singlePopMcmc feature. This will sample each of the cluster's parameters (age, distance modulus, metallicity, and reddening) with a Markov chain Monte Carlo algorithm. We input values for these parameters that we believed are accurate, known as the priors; these priors will inform the algorithm where to sample. They are fed into singlePopMcmc alongside the photometry file, which will then run thousands of iterations to sample each parameter space. This required many computing hours to complete, which was leveraged with Northwestern's Quest High Performance Computing Cluster.</p>
+				<p>We selected the photometry of these cluster members and used BASE-9's singlePopMcmc feature. This sampled each of the cluster's parameters (age, distance modulus, metallicity, and reddening) with a Markov chain Monte Carlo algorithm. We input values for these parameters that we believed were accurate, known as the priors; these priors informed the algorithm where to sample. They were fed into singlePopMcmc alongside the photometry file, which then ran thousands of iterations to sample each parameter space. This required many computing hours to complete, which was leveraged with Northwestern's Quest High Performance Computing Cluster.</p>
 				
-				<p>Once the script has finished running, we were left with thousands of data points, from which we constructed a histogram and fit it with a Gaussian for the most probable value. As a result, the cluster's age, distance modulus, metallicity, and reddening was found. When the cluster's age was determined, we used another feature of BASE-9 called makeCMD in order to generate a mean fit isochrone. These techniques have been applied before with NGC 188 described by Cohen et al. (2020).</p>
+				<p>Once the script finished running, we were left with thousands of data points, from which we constructed a histogram and fit it with a Gaussian for the most probable value. As a result, the cluster's age, distance modulus, metallicity, and reddening was found. When the cluster's age was determined, we used another feature of BASE-9 called makeCMD in order to generate a mean fit isochrone. These techniques have been applied before with NGC 188 described by Cohen et al. (2020).</p>
 				
-				<p>The derived cluster parameters were used along with the photometry in BASE-9's sampleMass feature to sample potential binaries. This feature will output two columns for each cluster member; a potential primary star mass and its ratio between the secondary. It will do so for hundreds of iterations, sampling potential combinations for each star. Once the script has finished, the primary masses and mass ratios are averaged for each object. If an object's secondary mass was greater than \(3\sigma\) from the mean, we considered it to be a binary. Since computing time on Quest was limited to 1 week (168 hours total), we ran sampleMass in parallel to reduce overall processing time. </p>
+				<p>The derived cluster parameters were used along with the photometry in BASE-9's sampleMass feature to sample potential binaries. This feature outputs two columns for each cluster member; a potential primary star mass and its ratio between the secondary. It does so for hundreds of iterations, sampling potential combinations for each star. Once the script finished, the primary masses and mass ratios are averaged for each object. If an object's secondary mass was greater than \(3\sigma\) from the mean, we considered it to be a binary. Since computing time on Quest was limited to 1 week (168 hours total), we ran sampleMass in parallel to reduce overall processing time. </p>
 				<br>
 				</div>
 
